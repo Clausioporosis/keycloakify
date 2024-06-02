@@ -6,6 +6,8 @@ import { useGetClassName } from "keycloakify/login/lib/useGetClassName";
 import type { KcContext } from "../kcContext";
 import type { I18n } from "../i18n";
 
+import StroodleLogo from '../../../../public/stroodle-logo-white.png';
+
 const my_custom_param = new URL(window.location.href).searchParams.get("my_custom_param");
 
 if (my_custom_param !== null) {
@@ -68,7 +70,9 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                         realm.password &&
                         social.providers && [getClassName("kcFormSocialAccountContentClass"), getClassName("kcFormSocialAccountClass")]
                     )}
+
                 >
+
                     {realm.password && (
                         <form id="kc-form-login" onSubmit={onSubmit} action={url.loginAction} method="post">
                             <div className={getClassName("kcFormGroupClass")}>

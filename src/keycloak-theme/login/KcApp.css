@@ -1,3 +1,32 @@
+:root {
+	/* Colors */
+	--accent-color: #4C9EBC;
+	--base-color-0: #101010;
+	--base-color-1: #151515;
+	--base-color-2: #202020;
+	--item-color: #303030;
+	--border-color: #606060;
+
+	/* actions */
+	/* base */
+	--base-hover-color: #202020;
+	--base-active-color: #464646;
+	/* container */
+	--container-hover-color: #404040;
+	--container-active-color: #808080;
+	/* item */
+	--item-hover-color: #404040;
+	--item-active-color: #808080;
+	/* accent */
+	--accent-hover-color: #4c9ebcc6;
+	--accent-active-color: #4c9ebc;
+
+	/* Text Colors */
+	--text-color: #bbb;
+	--icon-color: #bbbbbb;
+
+	--highlight-color: #666;
+}
 
 .my-color {
 	color: red;
@@ -8,9 +37,140 @@
 }
 
 .my-root-class {
-	background: white;
+	background: black;
 }
 
 .my-root-class body {
 	background: url(./assets/background.svg) no-repeat center center fixed;
+}
+
+.kcBodyClass {
+	background: url(./assets/background.svg) no-repeat center center fixed;
+}
+
+.kcHeaderClass {
+	display: none;
+}
+
+.sb-show-main.sb-main-padded {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.kcInputClass {
+	font-size: 16px;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: #333;
+	color: #ddd;
+	box-sizing: border-box;
+	height: 35px;
+}
+
+.kcLabelClass {
+	color: var(--text-color);
+}
+
+img {
+	margin-top: 15px;
+}
+
+.login-pf-page .card-pf {
+	border: #606060 1px solid;
+	border-radius: 5px;
+}
+
+
+.btn-primary {
+	background-color: var(--item-color);
+	color: var(--text-color);
+	font-size: large;
+	height: 35px;
+	width: auto;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	user-select: none;
+	background-image: none !important;
+}
+
+.btn-primary:disabled {
+	background-color: var(--base-color-2);
+	color: #808080;
+	cursor: not-allowed;
+}
+
+.btn-primary:disabled:hover {
+	background-color: var(--base-color-2);
+}
+
+.btn-primary:disabled:active {
+	background-color: var(--base-color-2);
+	animation: none;
+}
+
+#kc-locale ul {
+	color: var(--text-color);
+	background-color: var(--item-color);
+	border: none;
+	border-radius: 5px;
+	border: 1px solid var(--border-color);
+}
+
+
+#kc-locale-dropdown a {
+	color: var(--text-color);
+}
+
+#kc-locale ul li a {
+	background-color: var(--item-color);
+}
+
+#kc-locale ul li a:hover {
+	background-color: var(--item-hover-color);
+}
+
+#kc-locale ul li a {
+	color: var(--text-color) !important;
+}
+
+.btn-primary:hover {
+	background-color: var(--item-hover-color);
+}
+
+.btn-primary:active {
+	background-color: red;
+	background-image: red;
+	color: red;
+	animation: buttonPress 0.2s ease;
+}
+
+
+
+.btn:focus {
+	background-color: var(--item-active-color);
+}
+
+@keyframes buttonPress {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.95);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+.kcFormCardClass {
+	background-color: var(--base-color-1);
 }
